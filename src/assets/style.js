@@ -12,6 +12,12 @@ export default StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
   },
+  containerTable: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
   img: {
     width: "70%",
     height: "30%",
@@ -22,6 +28,7 @@ export default StyleSheet.create({
   },
   txtBold: {
     fontWeight: "bold",
+    fontStyle: "italic",
   },
   txtColdHeader: {
     fontWeight: "bold",
@@ -53,6 +60,7 @@ export default StyleSheet.create({
     fontStyle: "italic",
     textShadowRadius: 4,
     textAlign: "center",
+    margin: 10,
   },
   txtBody: {
     padding: 25,
@@ -61,6 +69,13 @@ export default StyleSheet.create({
     lineHeight: 25,
     color: "#333",
     backgroundColor: "#fff",
+  },
+  txtBodyExemplos: {
+    padding: 25,
+    fontSize: 18,
+    justifyContent: "center",
+    lineHeight: 25,
+    color: "#333",
   },
   txtExemplos: {
     color: "blue",
