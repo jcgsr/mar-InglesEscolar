@@ -3,8 +3,8 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Nono from "../components/Nono";
-import Modals from "../components/anos/Nono/Modals";
-import Conditionals from "../components/anos/Nono/Conditionals";
+import Modals from "../components/anos/NonoSubjects/Modals";
+import Conditionals from "../components/anos/NonoSubjects/Conditionals";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +16,32 @@ const StackRoutes = () => {
         component={Nono}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="Modals" component={Modals} />
-      <Stack.Screen name="Conditionals" component={Conditionals} />
+      <Stack.Screen
+        name="Modals"
+        component={Modals}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Conditionals"
+        component={Conditionals}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };

@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import Sexto from "../components/Sexto";
 import Setimo from "../components/Setimo";
 import Oitavo from "../components/Oitavo";
-// import Nono from "../components/Nono";
 import StackRoutes from "./stackRoutes";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
