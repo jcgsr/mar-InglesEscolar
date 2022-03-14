@@ -8,7 +8,7 @@ import Conditionals from "../components/anos/NonoSubjects/Conditionals";
 
 const Stack = createNativeStackNavigator();
 
-const StackRoutes = () => {
+const StackRoutes9 = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -46,4 +46,4 @@ const StackRoutes = () => {
   );
 };
 
-export default StackRoutes;
+export default StackRoutes9;

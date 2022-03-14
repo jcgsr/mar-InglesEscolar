@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
 import Sexto from "../components/Sexto";
-import Setimo from "../components/Setimo";
+import StackRoutes7 from "./stackRoutes7";
 import Oitavo from "../components/Oitavo";
-import StackRoutes from "./stackRoutes";
+import StackRoutes9 from "./stackRoutes9";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -47,7 +47,7 @@ const Routes = () => {
       />
       <Tab.Screen
         name="Sétimo"
-        component={Setimo}
+        component={StackRoutes7}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (
@@ -85,7 +85,7 @@ const Routes = () => {
       />
       <Tab.Screen
         name="Nono"
-        component={StackRoutes}
+        component={StackRoutes9}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (
