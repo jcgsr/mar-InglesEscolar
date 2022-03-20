@@ -18,6 +18,9 @@ const Setimo = () => {
   const navegaCan = () => {
     navigation.navigate("Can");
   };
+  const navegaCould = () => {
+    navigation.navigate("Could");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaPastSimple}>
@@ -31,6 +34,9 @@ const Setimo = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaCan}>
         <Text style={styles.txt}>Can</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaCould}>
+        <Text style={styles.txt}>Could</Text>
       </TouchableOpacity>
     </View>
   );

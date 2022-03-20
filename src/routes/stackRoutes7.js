@@ -7,6 +7,7 @@ import PastSimple from "../components/anos/SetimoSubjects/PastSimple";
 import ObjectPronouns from "../components/anos/SetimoSubjects/ObjectPronouns";
 import PrepTime from "../components/anos/SetimoSubjects/PrepTime";
 import Can from "../components/anos/SetimoSubjects/Can";
+import Could from "../components/anos/SetimoSubjects/Could";
 
 const Stack = createNativeStackNavigator();
 
@@ -60,6 +61,19 @@ const StackRoutes7 = () => {
       <Stack.Screen
         name="Can"
         component={Can}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Could"
+        component={Could}
         options={{
           headerStyle: {
             backgroundColor: "blue",
