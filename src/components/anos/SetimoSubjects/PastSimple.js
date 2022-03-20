@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Linking } from "react-native";
 
 import styles from "../../../assets/style";
 
@@ -137,8 +137,84 @@ const PastSimple = () => {
             os regulares acaba aqui. Porém, na negativa e na interrogativa, os
             irregulares seguem a mesma regrinha dos regulares. Vê a tabela
             abaixo com um exemplo de cada forma com o verbo irregular{" "}
-            <Text style={styles.txtBold}>to lose </Text>. Presta atenção que ele
+            <Text style={styles.txtRed}>to lose </Text>. Presta atenção que ele
             só muda na afirmativa.
+          </Text>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: "column",
+              alignItems: "stretch",
+              justifyContent: "space-between",
+              marginTop: 20,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "red",
+                flex: 1,
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 5,
+              }}
+            >
+              <Text style={styles.txtCol}>
+                + : I/you/he <Text style={styles.txtBold}>lost</Text>.
+              </Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: "blue",
+                flex: 1,
+                alignItems: "center",
+                padding: 5,
+              }}
+            >
+              <Text style={styles.txtCol}>
+                - : I/you/he <Text style={styles.txtBold}>did not/didn't</Text>{" "}
+                lose.
+              </Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: "grey",
+                flex: 1,
+                alignItems: "center",
+                padding: 5,
+                marginBottom: 20,
+              }}
+            >
+              <Text style={styles.txtCol}>
+                ? : <Text style={styles.txtBold}>Did </Text> I/you/he lose?
+              </Text>
+            </View>
+          </View>
+          <Text style={styles.txtBody}>
+            Para uma lista dos regulares mais usados, clica →{" "}
+            <Text
+              onPress={() =>
+                Linking.openURL(
+                  "https://www.yazigi.com.br/noticias/ingles/verbos-regulares-em-ingles-voce-sabe-quais-sao-os-mais-usados"
+                )
+              }
+              title="aqui"
+              style={{ color: "red" }}
+            >
+              aqui
+            </Text>
+            . Para uma outra lista, dos irregulares, clica →{" "}
+            <Text
+              onPress={() =>
+                Linking.openURL(
+                  "https://www.yazigi.com.br/noticias/ingles/60-verbos-irregulares-em-ingles-que-voce-precisa-saber"
+                )
+              }
+              title="aqui"
+              style={{ color: "red" }}
+            >
+              aqui
+            </Text>
+            .
           </Text>
         </View>
       </ScrollView>
