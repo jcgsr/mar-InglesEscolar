@@ -6,6 +6,7 @@ import Setimo from "../components/Setimo";
 import PastSimple from "../components/anos/SetimoSubjects/PastSimple";
 import ObjectPronouns from "../components/anos/SetimoSubjects/ObjectPronouns";
 import PrepTime from "../components/anos/SetimoSubjects/PrepTime";
+import Can from "../components/anos/SetimoSubjects/Can";
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,19 @@ const StackRoutes7 = () => {
       <Stack.Screen
         name="Prepositions of Time"
         component={PrepTime}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Can"
+        component={Can}
         options={{
           headerStyle: {
             backgroundColor: "blue",

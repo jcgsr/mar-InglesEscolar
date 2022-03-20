@@ -15,6 +15,9 @@ const Setimo = () => {
   const navegaPrepTime = () => {
     navigation.navigate("Prepositions of Time");
   };
+  const navegaCan = () => {
+    navigation.navigate("Can");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaPastSimple}>
@@ -25,6 +28,9 @@ const Setimo = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaPrepTime}>
         <Text style={styles.txt}>Prepositions of Time</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaCan}>
+        <Text style={styles.txt}>Can</Text>
       </TouchableOpacity>
     </View>
   );

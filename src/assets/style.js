@@ -120,5 +120,6 @@ export default StyleSheet.create({
     backgroundColor: "red",
     padding: 1,
     marginTop: 15,
+    marginBottom: 15,
   },
 });
