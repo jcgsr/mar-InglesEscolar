@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
-import Sexto from "../components/Sexto";
+import StackRoutes6 from "./stackRoutes6";
 import StackRoutes7 from "./stackRoutes7";
 import Oitavo from "../components/Oitavo";
 import StackRoutes9 from "./stackRoutes9";
@@ -28,7 +28,7 @@ const Routes = () => {
     >
       <Tab.Screen
         name="Sexto"
-        component={Sexto}
+        component={StackRoutes6}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (

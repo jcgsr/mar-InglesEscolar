@@ -18,6 +18,13 @@ export default StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
   },
+  containerTableCol: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "stretch",
+    marginBottom: 20,
+  },
   img: {
     width: "70%",
     height: "30%",
