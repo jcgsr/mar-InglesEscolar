@@ -90,12 +90,12 @@ const Could = () => {
             <Text style={styles.txtCol}>NEGATIVA</Text>
             <Text style={styles.txtCol}>I couldn't</Text>
             <Text style={styles.txtCol}>You couldn't</Text>
-            <Text style={styles.txtCol}>He couldn'Tt</Text>
+            <Text style={styles.txtCol}>He couldn't</Text>
             <Text style={styles.txtCol}>She couldn't</Text>
-            <Text style={styles.txtCol}>It couldn'Tt</Text>
-            <Text style={styles.txtCol}>We couldn'Tt</Text>
+            <Text style={styles.txtCol}>It couldn't</Text>
+            <Text style={styles.txtCol}>We couldn't</Text>
             <Text style={styles.txtCol}>You couldn't</Text>
-            <Text style={styles.txtCol}>They couldn'Tt</Text>
+            <Text style={styles.txtCol}>They couldn't</Text>
           </View>
           <View
             style={{
