@@ -24,6 +24,12 @@ const Setimo = () => {
   const navegaLinkingWords = () => {
     navigation.navigate("Linking Words");
   };
+  const navegaBePast = () => {
+    navigation.navigate("Be (Past Simple)");
+  };
+  const navegaPastContinuous = () => {
+    navigation.navigate("Past Continuous");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaPastSimple}>
@@ -43,6 +49,12 @@ const Setimo = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaLinkingWords}>
         <Text style={styles.txt}>Linking Words</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaBePast}>
+        <Text style={styles.txt}>Be (Past Simple)</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaPastContinuous}>
+        <Text style={styles.txt}>Past Continuous</Text>
       </TouchableOpacity>
     </View>
   );

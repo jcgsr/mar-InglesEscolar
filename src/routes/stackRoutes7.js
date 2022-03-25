@@ -9,6 +9,8 @@ import PrepTime from "../components/anos/SetimoSubjects/PrepTime";
 import Can from "../components/anos/SetimoSubjects/Can";
 import Could from "../components/anos/SetimoSubjects/Could";
 import LinkingWords from "../components/anos/SetimoSubjects/LinkingWords";
+import BePast from "../components/anos/SetimoSubjects/BePast";
+import PastContinuous from "../components/anos/SetimoSubjects/PastContinuous";
 
 const Stack = createNativeStackNavigator();
 
@@ -88,6 +90,32 @@ const StackRoutes7 = () => {
       <Stack.Screen
         name="Linking Words"
         component={LinkingWords}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Be (Past Simple)"
+        component={BePast}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Past Continuous"
+        component={PastContinuous}
         options={{
           headerStyle: {
             backgroundColor: "blue",
