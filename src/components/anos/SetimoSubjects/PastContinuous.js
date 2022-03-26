@@ -192,7 +192,7 @@ const PastContinuous = () => {
           </View>
         </View>
         <Text style={styles.txtExemplos}>
-          Ex.: Was I watching? Were you watching. Was he watching?
+          Ex.: Was I watching? Were you watching? Was he watching?
         </Text>
         <Text style={styles.txtHR}></Text>
         <View style={styles.containerTableCol}>
