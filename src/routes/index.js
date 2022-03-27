@@ -65,7 +65,7 @@ const Routes = () => {
         }}
       />
       <Tab.Screen
-        name="StackRoutes8"
+        name="Oitavo"
         component={StackRoutes8}
         options={{
           tabBarIcon: ({ color, size }) => {
