@@ -12,9 +12,10 @@ const Oitavo = () => {
   const navegaRelativePronouns = () => {
     navigation.navigate("Relative Pronouns");
   };
-  // const navegaPrepTime = () => {
-  //   navigation.navigate("Prepositions of Time");
-  // };
+  const navegaAdjSuperlative = () => {
+    navigation.navigate("Adjectives (Superlative)");
+  };
+
   // const navegaCan = () => {
   //   navigation.navigate("Can");
   // };
@@ -34,6 +35,9 @@ const Oitavo = () => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaAdjComparative}>
         <Text style={styles.txt}>Adjectives (Comparative)</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaAdjSuperlative}>
+        <Text style={styles.txt}>Adjectives (Superlative)</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaRelativePronouns}>
         <Text style={styles.txt}>Relative Pronouns</Text>
