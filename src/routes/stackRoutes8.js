@@ -6,6 +6,7 @@ import Oitavo from "../components/Oitavo";
 import AdjectivesComparative from "../components/anos/OitavoSubjects/AdjectivesComparative";
 import AdjectivesSuperlative from "../components/anos/OitavoSubjects/AdjectivesSuperlative";
 import RelativePronouns from "../components/anos/OitavoSubjects/RelativePronouns";
+import BeGoingTo from "../components/anos/OitavoSubjects/BeGoingTo";
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,19 @@ const StackRoutes8 = () => {
       <Stack.Screen
         name="Relative Pronouns"
         component={RelativePronouns}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Be Going To"
+        component={BeGoingTo}
         options={{
           headerStyle: {
             backgroundColor: "blue",

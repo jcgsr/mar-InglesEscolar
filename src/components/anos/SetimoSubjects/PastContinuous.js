@@ -53,7 +53,7 @@ const PastContinuous = () => {
         <View style={styles.containerTable}>
           <View
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#B60D22",
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -64,7 +64,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "#040644",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -74,7 +74,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "green",
+              backgroundColor: "#064906",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -84,7 +84,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "grey",
+              backgroundColor: "#393A39",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -101,7 +101,7 @@ const PastContinuous = () => {
         <View style={styles.containerTable}>
           <View
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#B60D22",
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -112,7 +112,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "#040644",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -122,7 +122,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "green",
+              backgroundColor: "#064906",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -132,7 +132,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "grey",
+              backgroundColor: "#393A39",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -151,7 +151,7 @@ const PastContinuous = () => {
         <View style={styles.containerTable}>
           <View
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "#040644",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -161,7 +161,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#B60D22",
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -172,7 +172,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "green",
+              backgroundColor: "#064906",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -182,7 +182,7 @@ const PastContinuous = () => {
           </View>
           <View
             style={{
-              backgroundColor: "grey",
+              backgroundColor: "#393A39",
               flex: 1,
               alignItems: "center",
               padding: 5,
