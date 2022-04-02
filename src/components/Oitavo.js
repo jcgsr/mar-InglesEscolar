@@ -19,9 +19,9 @@ const Oitavo = () => {
   const navegaBeGoingTo = () => {
     navigation.navigate("Be Going To");
   };
-  // const navegaCould = () => {
-  //   navigation.navigate("Could");
-  // };
+  const navegaWill = () => {
+    navigation.navigate("Will");
+  };
   // const navegaLinkingWords = () => {
   //   navigation.navigate("Linking Words");
   // };
@@ -45,15 +45,16 @@ const Oitavo = () => {
       <TouchableOpacity style={styles.btn} onPress={navegaBeGoingTo}>
         <Text style={styles.txt}>Future (Be Going To)</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaWill}>
+        <Text style={styles.txt}>Future (Will)</Text>
+      </TouchableOpacity>
       {/*<TouchableOpacity style={styles.btn} onPress={navegaPrepTime}>
         <Text style={styles.txt}>Prepositions of Time</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaCan}>
         <Text style={styles.txt}>Can</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaCould}>
-        <Text style={styles.txt}>Could</Text>
-      </TouchableOpacity>
+
       <TouchableOpacity style={styles.btn} onPress={navegaLinkingWords}>
         <Text style={styles.txt}>Linking Words</Text>
       </TouchableOpacity>

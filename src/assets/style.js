@@ -92,7 +92,7 @@ export default StyleSheet.create({
     lineHeight: 21,
   },
   btn: {
-    backgroundColor: "#f00",
+    backgroundColor: "#B60D22",
     width: "70%",
     borderRadius: 10,
     padding: 10,
@@ -101,7 +101,7 @@ export default StyleSheet.create({
   table: {
     flex: 1,
     flexDirection: "row",
-    backgroundColor: "blue",
+    backgroundColor: "#040644",
     alignItems: "flex-start",
     justifyContent: "center",
     textAlign: "center",
