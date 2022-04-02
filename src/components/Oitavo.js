@@ -28,16 +28,16 @@ const Oitavo = () => {
   const navegaQuantifiers = () => {
     navigation.navigate("Quantifiers");
   };
-  // const navegaPastContinuous = () => {
-  //   navigation.navigate("Past Continuous");
-  // };
+  const navegaCountable = () => {
+    navigation.navigate("Countable");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaAdjComparative}>
-        <Text style={styles.txt}>Adjectives (Comparative)</Text>
+        <Text style={styles.txt}>Adj. - Comparative</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaAdjSuperlative}>
-        <Text style={styles.txt}>Adjectives (Superlative)</Text>
+        <Text style={styles.txt}>Adj. - Superlative</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaRelativePronouns}>
         <Text style={styles.txt}>Relative Pronouns</Text>
@@ -54,6 +54,10 @@ const Oitavo = () => {
       <TouchableOpacity style={styles.btn} onPress={navegaQuantifiers}>
         <Text style={styles.txt}>Quantifiers</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaCountable}>
+        <Text style={styles.txt}>(Un)Countable Nouns</Text>
+      </TouchableOpacity>
+
       {/*<TouchableOpacity style={styles.btn} onPress={navegaPrepTime}>
         <Text style={styles.txt}>Prepositions of Time</Text>
       </TouchableOpacity>
@@ -61,11 +65,7 @@ const Oitavo = () => {
         <Text style={styles.txt}>Can</Text>
       </TouchableOpacity>
 
-     
-    
-      <TouchableOpacity style={styles.btn} onPress={navegaPastContinuous}>
-        <Text style={styles.txt}>Past Continuous</Text>
-      </TouchableOpacity>*/}
+    */}
     </View>
   );
 };

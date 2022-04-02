@@ -10,6 +10,7 @@ import BeGoingTo from "../components/anos/OitavoSubjects/BeGoingTo";
 import Will from "../components/anos/OitavoSubjects/Will";
 import PrefixSufix from "../components/anos/OitavoSubjects/PrefixSufix";
 import Quantifiers from "../components/anos/OitavoSubjects/Quantifiers";
+import Countable from "../components/anos/OitavoSubjects/Countable";
 
 const Stack = createNativeStackNavigator();
 
@@ -102,6 +103,19 @@ const StackRoutes8 = () => {
       <Stack.Screen
         name="Quantifiers"
         component={Quantifiers}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Countable"
+        component={Countable}
         options={{
           headerStyle: {
             backgroundColor: "blue",
