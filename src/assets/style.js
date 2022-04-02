@@ -52,7 +52,7 @@ export default StyleSheet.create({
   },
   txtH1: {
     fontSize: 27,
-    color: "red",
+    color: "#B60D22",
     textShadowColor: "rgba(0, 0, 255, 0.75)",
     textShadowOffset: { width: 3, height: 3 },
     fontWeight: "bold",
@@ -61,7 +61,17 @@ export default StyleSheet.create({
   },
   txtH2: {
     fontSize: 20,
-    color: "red",
+    color: "#B60D22",
+    textShadowColor: "rgba(0, 0, 255, 0.75)",
+    textShadowOffset: { width: 1, height: 1 },
+    fontStyle: "italic",
+    textShadowRadius: 4,
+    textAlign: "center",
+    margin: 10,
+  },
+  txtH3: {
+    fontSize: 13,
+    color: "#B60D22",
     textShadowColor: "rgba(0, 0, 255, 0.75)",
     textShadowOffset: { width: 1, height: 1 },
     fontStyle: "italic",

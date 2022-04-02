@@ -22,9 +22,9 @@ const Oitavo = () => {
   const navegaWill = () => {
     navigation.navigate("Will");
   };
-  // const navegaLinkingWords = () => {
-  //   navigation.navigate("Linking Words");
-  // };
+  const navegaPrefixSufix = () => {
+    navigation.navigate("Prefix and Sufix");
+  };
   // const navegaBePast = () => {
   //   navigation.navigate("Be (Past Simple)");
   // };
@@ -48,6 +48,9 @@ const Oitavo = () => {
       <TouchableOpacity style={styles.btn} onPress={navegaWill}>
         <Text style={styles.txt}>Future (Will)</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaPrefixSufix}>
+        <Text style={styles.txt}>Prefix and Sufix</Text>
+      </TouchableOpacity>
       {/*<TouchableOpacity style={styles.btn} onPress={navegaPrepTime}>
         <Text style={styles.txt}>Prepositions of Time</Text>
       </TouchableOpacity>
@@ -55,9 +58,7 @@ const Oitavo = () => {
         <Text style={styles.txt}>Can</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.btn} onPress={navegaLinkingWords}>
-        <Text style={styles.txt}>Linking Words</Text>
-      </TouchableOpacity>
+     
       <TouchableOpacity style={styles.btn} onPress={navegaBePast}>
         <Text style={styles.txt}>Be (Past Simple)</Text>
       </TouchableOpacity>
