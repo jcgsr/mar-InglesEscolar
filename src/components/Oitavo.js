@@ -31,6 +31,9 @@ const Oitavo = () => {
   const navegaCountable = () => {
     navigation.navigate("Countable");
   };
+  const navegaUsedTo = () => {
+    navigation.navigate("Used to");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaAdjComparative}>
@@ -58,14 +61,9 @@ const Oitavo = () => {
         <Text style={styles.txt}>(Un)Countable Nouns</Text>
       </TouchableOpacity>
 
-      {/*<TouchableOpacity style={styles.btn} onPress={navegaPrepTime}>
-        <Text style={styles.txt}>Prepositions of Time</Text>
+      <TouchableOpacity style={styles.btn} onPress={navegaUsedTo}>
+        <Text style={styles.txt}>Used to</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaCan}>
-        <Text style={styles.txt}>Can</Text>
-      </TouchableOpacity>
-
-    */}
     </View>
   );
 };
