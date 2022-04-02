@@ -15,6 +15,9 @@ const Sexto = () => {
   const navegaArticles = () => {
     navigation.navigate("Articles");
   };
+  const navegaPossessiveAdj = () => {
+    navigation.navigate("Possessive Adjectives");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaSubjPronouns}>
@@ -25,6 +28,9 @@ const Sexto = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaArticles}>
         <Text style={styles.txt}>Articles</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaPossessiveAdj}>
+        <Text style={styles.txt}>Possessive Adj.</Text>
       </TouchableOpacity>
     </View>
   );

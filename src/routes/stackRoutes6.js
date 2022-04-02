@@ -6,6 +6,7 @@ import Sexto from "../components/Sexto";
 import SubjectPronouns from "../components/anos/SextoSubjects/SubjectPronouns";
 import Be from "../components/anos/SextoSubjects/Be";
 import Articles from "../components/anos/SextoSubjects/Articles";
+import PossessiveAdj from "../components/anos/SextoSubjects/PossessiveAdj";
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,19 @@ const StackRoutes6 = () => {
       <Stack.Screen
         name="Articles"
         component={Articles}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Possessive Adjectives"
+        component={PossessiveAdj}
         options={{
           headerStyle: {
             backgroundColor: "blue",
