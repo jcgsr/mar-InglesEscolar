@@ -26,8 +26,10 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   img: {
-    width: "70%",
-    height: "30%",
+    width: 200,
+    height: 100,
+    resizeMode: "stretch",
+    marginTop: 30,
   },
   txt: {
     color: "white",

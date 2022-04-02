@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Sexto from "../components/Sexto";
 import SubjectPronouns from "../components/anos/SextoSubjects/SubjectPronouns";
 import Be from "../components/anos/SextoSubjects/Be";
+import Articles from "../components/anos/SextoSubjects/Articles";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,19 @@ const StackRoutes6 = () => {
       <Stack.Screen
         name="To Be"
         component={Be}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Articles"
+        component={Articles}
         options={{
           headerStyle: {
             backgroundColor: "blue",
