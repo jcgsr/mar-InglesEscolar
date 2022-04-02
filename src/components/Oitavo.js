@@ -25,9 +25,9 @@ const Oitavo = () => {
   const navegaPrefixSufix = () => {
     navigation.navigate("Prefix and Sufix");
   };
-  // const navegaBePast = () => {
-  //   navigation.navigate("Be (Past Simple)");
-  // };
+  const navegaQuantifiers = () => {
+    navigation.navigate("Quantifiers");
+  };
   // const navegaPastContinuous = () => {
   //   navigation.navigate("Past Continuous");
   // };
@@ -51,6 +51,9 @@ const Oitavo = () => {
       <TouchableOpacity style={styles.btn} onPress={navegaPrefixSufix}>
         <Text style={styles.txt}>Prefix and Sufix</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaQuantifiers}>
+        <Text style={styles.txt}>Quantifiers</Text>
+      </TouchableOpacity>
       {/*<TouchableOpacity style={styles.btn} onPress={navegaPrepTime}>
         <Text style={styles.txt}>Prepositions of Time</Text>
       </TouchableOpacity>
@@ -59,9 +62,7 @@ const Oitavo = () => {
       </TouchableOpacity>
 
      
-      <TouchableOpacity style={styles.btn} onPress={navegaBePast}>
-        <Text style={styles.txt}>Be (Past Simple)</Text>
-      </TouchableOpacity>
+    
       <TouchableOpacity style={styles.btn} onPress={navegaPastContinuous}>
         <Text style={styles.txt}>Past Continuous</Text>
       </TouchableOpacity>*/}

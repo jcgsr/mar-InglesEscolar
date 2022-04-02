@@ -9,6 +9,7 @@ import RelativePronouns from "../components/anos/OitavoSubjects/RelativePronouns
 import BeGoingTo from "../components/anos/OitavoSubjects/BeGoingTo";
 import Will from "../components/anos/OitavoSubjects/Will";
 import PrefixSufix from "../components/anos/OitavoSubjects/PrefixSufix";
+import Quantifiers from "../components/anos/OitavoSubjects/Quantifiers";
 
 const Stack = createNativeStackNavigator();
 
@@ -88,6 +89,19 @@ const StackRoutes8 = () => {
       <Stack.Screen
         name="Prefix and Sufix"
         component={PrefixSufix}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Quantifiers"
+        component={Quantifiers}
         options={{
           headerStyle: {
             backgroundColor: "blue",
