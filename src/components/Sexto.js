@@ -24,13 +24,16 @@ const Sexto = () => {
   const navegaGenitive = () => {
     navigation.navigate("Genitive");
   };
+  const navegaDemonstrative = () => {
+    navigation.navigate("Demonstrative");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaSubjPronouns}>
         <Text style={styles.txt}>Subject Pronouns</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaBe}>
-        <Text style={styles.txt}>To be</Text>
+        <Text style={styles.txt}>To Be</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaArticles}>
         <Text style={styles.txt}>Articles</Text>
@@ -43,6 +46,9 @@ const Sexto = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaGenitive}>
         <Text style={styles.txt}>Genitive</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaDemonstrative}>
+        <Text style={styles.txt}>Demonstrative</Text>
       </TouchableOpacity>
     </View>
   );
