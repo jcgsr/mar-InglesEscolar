@@ -13,6 +13,7 @@ import Demonstrative from "../components/anos/SextoSubjects/Demonstrative";
 import ThereBe from "../components/anos/SextoSubjects/ThereBe";
 import PresentSimple from "../components/anos/SextoSubjects/PresentSimple";
 import PrepPlace from "../components/anos/SextoSubjects/PrepPlace";
+import Plural from "../components/anos/SextoSubjects/Plural";
 
 const Stack = createNativeStackNavigator();
 
@@ -144,6 +145,19 @@ const StackRoutes6 = () => {
       <Stack.Screen
         name="Preposition of Place"
         component={PrepPlace}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Plural"
+        component={Plural}
         options={{
           headerStyle: {
             backgroundColor: "blue",

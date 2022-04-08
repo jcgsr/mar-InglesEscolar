@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from "react-native";
 import React from "react";
 
 import styles from "../../../assets/style";
+
 const PrepPlace = () => {
   return (
     <ScrollView>
