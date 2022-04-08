@@ -75,12 +75,12 @@ const Can = () => {
             <Text style={styles.txtCol}>NEGATIVA</Text>
             <Text style={styles.txtCol}>I can't</Text>
             <Text style={styles.txtCol}>You can't</Text>
-            <Text style={styles.txtCol}>He can'Tt</Text>
+            <Text style={styles.txtCol}>He can't</Text>
             <Text style={styles.txtCol}>She can't</Text>
-            <Text style={styles.txtCol}>It can'Tt</Text>
-            <Text style={styles.txtCol}>We can'Tt</Text>
+            <Text style={styles.txtCol}>It can't</Text>
+            <Text style={styles.txtCol}>We can't</Text>
             <Text style={styles.txtCol}>You can't</Text>
-            <Text style={styles.txtCol}>They can'Tt</Text>
+            <Text style={styles.txtCol}>They can't</Text>
           </View>
           <View
             style={{

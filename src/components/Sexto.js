@@ -30,6 +30,9 @@ const Sexto = () => {
   const navegaThereBe = () => {
     navigation.navigate("There Be");
   };
+  const navegaPresentSimple = () => {
+    navigation.navigate("Present Simple");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaSubjPronouns}>
@@ -55,6 +58,9 @@ const Sexto = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaThereBe}>
         <Text style={styles.txt}>There Be</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaPresentSimple}>
+        <Text style={styles.txt}>Present Simple</Text>
       </TouchableOpacity>
     </View>
   );
