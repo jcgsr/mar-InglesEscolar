@@ -27,6 +27,9 @@ const Sexto = () => {
   const navegaDemonstrative = () => {
     navigation.navigate("Demonstrative");
   };
+  const navegaThereBe = () => {
+    navigation.navigate("There Be");
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn} onPress={navegaSubjPronouns}>
@@ -49,6 +52,9 @@ const Sexto = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={navegaDemonstrative}>
         <Text style={styles.txt}>Demonstrative</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={navegaThereBe}>
+        <Text style={styles.txt}>There Be</Text>
       </TouchableOpacity>
     </View>
   );

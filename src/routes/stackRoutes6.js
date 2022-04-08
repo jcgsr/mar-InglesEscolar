@@ -10,6 +10,7 @@ import PossessiveAdj from "../components/anos/SextoSubjects/PossessiveAdj";
 import Cardinals from "../components/anos/SextoSubjects/Cardinals";
 import Genitive from "../components/anos/SextoSubjects/Genitive";
 import Demonstrative from "../components/anos/SextoSubjects/Demonstrative";
+import ThereBe from "../components/anos/SextoSubjects/ThereBe";
 
 const Stack = createNativeStackNavigator();
 
@@ -102,6 +103,19 @@ const StackRoutes6 = () => {
       <Stack.Screen
         name="Demonstrative"
         component={Demonstrative}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="There Be"
+        component={ThereBe}
         options={{
           headerStyle: {
             backgroundColor: "blue",
