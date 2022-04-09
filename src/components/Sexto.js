@@ -39,40 +39,49 @@ const Sexto = () => {
   const navegaPlural = () => {
     navigation.navigate("Plural");
   };
+  const navegaPresentContinuous = () => {
+    navigation.navigate("Present Continuous");
+  };
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.btn} onPress={navegaSubjPronouns}>
+    <View style={styles.containerSexto}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaSubjPronouns}>
         <Text style={styles.txt}>Subject Pronouns</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaBe}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaBe}>
         <Text style={styles.txt}>To Be</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaArticles}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaArticles}>
         <Text style={styles.txt}>Articles</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaPossessiveAdj}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaPossessiveAdj}>
         <Text style={styles.txt}>Possessive Adj.</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaCardinals}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaCardinals}>
         <Text style={styles.txt}>Cardinal Numbers</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaGenitive}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaGenitive}>
         <Text style={styles.txt}>Genitive</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaDemonstrative}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaDemonstrative}>
         <Text style={styles.txt}>Demonstrative</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaThereBe}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaThereBe}>
         <Text style={styles.txt}>There Be</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaPresentSimple}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaPresentSimple}>
         <Text style={styles.txt}>Present Simple</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaPrepPlace}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaPrepPlace}>
         <Text style={styles.txt}>Preposition of Place</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={navegaPlural}>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaPlural}>
         <Text style={styles.txt}>Plural</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.btnSexto}
+        onPress={navegaPresentContinuous}
+      >
+        <Text style={styles.txt}>Present Continuous</Text>
       </TouchableOpacity>
     </View>
   );

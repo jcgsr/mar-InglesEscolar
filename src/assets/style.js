@@ -7,6 +7,15 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around",
   },
+  containerSexto: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    marginRight: 10,
+  },
   containerExemplos: {
     backgroundColor: "transparent",
     alignItems: "center",
@@ -109,6 +118,14 @@ export default StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     alignItems: "center",
+  },
+  btnSexto: {
+    backgroundColor: "#B60D22",
+    width: "50%",
+    borderRadius: 10,
+    padding: 8,
+    alignItems: "center",
+    margin: 2,
   },
   table: {
     flex: 1,
