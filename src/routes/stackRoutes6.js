@@ -16,6 +16,7 @@ import PrepPlace from "../components/anos/SextoSubjects/PrepPlace";
 import Plural from "../components/anos/SextoSubjects/Plural";
 import PresentContinuous from "../components/anos/SextoSubjects/PresentContinuous";
 import Have from "../components/anos/SextoSubjects/Have";
+import Time from "../components/anos/SextoSubjects/Time";
 
 const Stack = createNativeStackNavigator();
 
@@ -186,6 +187,19 @@ const StackRoutes6 = () => {
       <Stack.Screen
         name="To Have"
         component={Have}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Telling Time"
+        component={Time}
         options={{
           headerStyle: {
             backgroundColor: "blue",
