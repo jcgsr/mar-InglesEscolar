@@ -19,6 +19,7 @@ import Have from "../components/anos/SextoSubjects/Have";
 import Time from "../components/anos/SextoSubjects/Time";
 import Ordinals from "../components/anos/SextoSubjects/Ordinals";
 import Dates from "../components/anos/SextoSubjects/Dates";
+import AdvFreq from "../components/anos/SextoSubjects/AdvFreq";
 
 const Stack = createNativeStackNavigator();
 
@@ -228,6 +229,19 @@ const StackRoutes6 = () => {
       <Stack.Screen
         name="Dates"
         component={Dates}
+        options={{
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            color: "white",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Adverbs of Frequency"
+        component={AdvFreq}
         options={{
           headerStyle: {
             backgroundColor: "blue",

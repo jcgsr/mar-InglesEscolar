@@ -54,6 +54,9 @@ const Sexto = () => {
   const navegaDates = () => {
     navigation.navigate("Dates");
   };
+  const navegaAdvFreq = () => {
+    navigation.navigate("Adverbs of Frequency");
+  };
   return (
     <View style={styles.containerSexto}>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaSubjPronouns}>
@@ -106,6 +109,9 @@ const Sexto = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaDates}>
         <Text style={styles.txt}>Dates</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaAdvFreq}>
+        <Text style={styles.txt}>Adverbs of Frequency</Text>
       </TouchableOpacity>
     </View>
   );
