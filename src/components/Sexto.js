@@ -42,6 +42,9 @@ const Sexto = () => {
   const navegaPresentContinuous = () => {
     navigation.navigate("Present Continuous");
   };
+  const navegaHave = () => {
+    navigation.navigate("To Have");
+  };
   return (
     <View style={styles.containerSexto}>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaSubjPronouns}>
@@ -82,6 +85,9 @@ const Sexto = () => {
         onPress={navegaPresentContinuous}
       >
         <Text style={styles.txt}>Present Continuous</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaHave}>
+        <Text style={styles.txt}>To Have</Text>
       </TouchableOpacity>
     </View>
   );
