@@ -48,6 +48,9 @@ const Sexto = () => {
   const navegaTime = () => {
     navigation.navigate("Telling Time");
   };
+  const navegaOrdinals = () => {
+    navigation.navigate("Ordinal Numbers");
+  };
   return (
     <View style={styles.containerSexto}>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaSubjPronouns}>
@@ -94,6 +97,9 @@ const Sexto = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaTime}>
         <Text style={styles.txt}>Telling Time</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnSexto} onPress={navegaOrdinals}>
+        <Text style={styles.txt}>Ordinal Numbers</Text>
       </TouchableOpacity>
     </View>
   );
