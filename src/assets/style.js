@@ -70,6 +70,14 @@ export default StyleSheet.create({
     textShadowRadius: 4,
     margin: 20,
   },
+  txtH1Home: {
+    fontSize: 28,
+    color: "red",
+    fontWeight: "bold",
+    textShadowRadius: 4,
+    marginTop: 30,
+    marginHorizontal: 20,
+  },
   txtH2: {
     fontSize: 20,
     color: "#B60D22",
@@ -96,6 +104,14 @@ export default StyleSheet.create({
     justifyContent: "center",
     lineHeight: 25,
     color: "#333",
+    backgroundColor: "#fff",
+  },
+  txtBodyHome: {
+    padding: 25,
+    fontSize: 22,
+    justifyContent: "center",
+    lineHeight: 28,
+    color: "red",
     backgroundColor: "#fff",
   },
   txtBodyExemplos: {

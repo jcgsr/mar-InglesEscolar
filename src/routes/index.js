@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
+import Home from "./Home";
 import StackRoutes6 from "./stackRoutes6";
 import StackRoutes7 from "./stackRoutes7";
 import StackRoutes8 from "./stackRoutes8";
@@ -26,6 +27,19 @@ const Routes = () => {
         },
       }}
     >
+      <Tab.Screen
+        name="Início"
+        component={Home}
+        options={{
+          tabBarIcon: ({ color, size }) => {
+            return <MaterialCommunityIcons name="home" size={24} color="red" />;
+          },
+          headerStyle: {
+            backgroundColor: "red",
+          },
+          headerTintColor: "white",
+        }}
+      />
       <Tab.Screen
         name="Sexto"
         component={StackRoutes6}
