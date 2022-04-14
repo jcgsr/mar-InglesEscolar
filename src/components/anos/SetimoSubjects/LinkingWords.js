@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const LinkingWords = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           <Text style={styles.txtBold}>Linking Words (conjunções)</Text> são
           usadas para mostrar relações entre ideias. Elas podem ser usadas para
@@ -51,6 +62,12 @@ const LinkingWords = () => {
             <Text style={styles.txtCol}>despite/in spite of - apesar de</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -87,6 +104,12 @@ const LinkingWords = () => {
             </Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );

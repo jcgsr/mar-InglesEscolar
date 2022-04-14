@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
-
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 const PrepTime = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           As Preposições de Tempo (são várias:{" "}
           <Text style={styles.txtBold}>during, before, after, since,</Text> etc)
@@ -66,6 +76,12 @@ const PrepTime = () => {
               dias da semana, dias + partes do dia, datas, dias especiais
             </Text>
           </View>
+          <AdMobBanner
+            bannerSize="smartBanner"
+            adUnitID="ca-app-pub-2008019372085379/1007709159"
+            servePersonalizedAds // true or false
+            onDidFailToReceiveAdWithError={(e) => console.log(e)}
+          />
           <Text style={styles.txtH2}>Exemplos</Text>
           {/*AT*/}
           <Text style={styles.txtExemplos}>
@@ -140,6 +156,12 @@ const PrepTime = () => {
             afternoon (na/pela terça à tarde)
           </Text>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );

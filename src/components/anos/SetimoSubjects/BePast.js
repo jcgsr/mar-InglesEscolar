@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
-
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 const BePast = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           O Passado Simples do verbo <Text style={styles.txtBold}>To Be</Text>{" "}
           tem duas formas quando conjugado:{" "}
@@ -67,6 +77,12 @@ const BePast = () => {
             <Text style={styles.txtCol}>Eles/Elas eram</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -107,6 +123,12 @@ const BePast = () => {
             <Text style={styles.txtCol}>Eles/Elas não eram</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -147,6 +169,12 @@ const BePast = () => {
             <Text style={styles.txtCol}>Eles/Elas eram?</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );

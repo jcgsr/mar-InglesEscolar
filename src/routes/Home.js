@@ -3,10 +3,10 @@ import {
   Text,
   Image,
   ScrollView,
-  Linking,
   TouchableOpacity,
   Button,
 } from "react-native";
+import * as Linking from "expo-linking";
 import React, { useEffect } from "react";
 
 import styles from "../assets/style";
@@ -46,7 +46,7 @@ const Home = () => {
               );
             }}
             name="whatsapp"
-            size={24}
+            size={32}
             color="green"
           />{" "}
           ou pelo{" "}
@@ -55,7 +55,7 @@ const Home = () => {
               Linking.openURL("https://telegram.me/jcgsr");
             }}
             name="telegram"
-            size={24}
+            size={32}
             color="grey"
           />
           . <Text style={styles.txtBold}>Disclaimer</Text>: eu utilizei,

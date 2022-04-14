@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView, Linking } from "react-native";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const PastSimple = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           O Passado Simples é um tempo verbal usado para falar sobre coisas que
           aconteceram ou existiram antes do momento em que se fala, ou seja, do
@@ -123,6 +134,12 @@ const PastSimple = () => {
             </View>
           </View>
           <Text style={styles.txtHR} />
+          <AdMobBanner
+            bannerSize="smartBanner"
+            adUnitID="ca-app-pub-2008019372085379/1007709159"
+            servePersonalizedAds // true or false
+            onDidFailToReceiveAdWithError={(e) => console.log(e)}
+          />
           <Text style={styles.txtH1}>Verbos Irregulares</Text>
           <Text style={styles.txtBody}>
             Bem... (participating in a Google Meeting - Riachuelo... Using
@@ -216,6 +233,12 @@ const PastSimple = () => {
             </Text>
             .
           </Text>
+          <AdMobBanner
+            bannerSize="smartBanner"
+            adUnitID="ca-app-pub-2008019372085379/1007709159"
+            servePersonalizedAds // true or false
+            onDidFailToReceiveAdWithError={(e) => console.log(e)}
+          />
         </View>
       </ScrollView>
     </View>

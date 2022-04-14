@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const Can = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           <Text style={styles.txtBold}>Can</Text> é um verbo modal, por isso
           jamais muda. Isso mesmo! Não muda sua forma com os pronomes (I, you,
@@ -61,6 +72,12 @@ const Can = () => {
             <Text style={styles.txtCol}>Eles/Elas podem</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -101,6 +118,12 @@ const Can = () => {
             <Text style={styles.txtCol}>Eles/Elas não podem</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -141,6 +164,12 @@ const Can = () => {
             <Text style={styles.txtCol}>Eles/Elas podem?</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtH2}>Exemplos</Text>
         <Text style={styles.txtExemplos}>
           I <Text style={styles.txtRed}>can </Text> play the guitar. (Eu{" "}
@@ -166,6 +195,12 @@ const Can = () => {
           He <Text style={styles.txtRed}>can </Text> come with us. (Ele{" "}
           <Text style={styles.txtRed}>pode </Text> vir conosco.)
         </Text>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );

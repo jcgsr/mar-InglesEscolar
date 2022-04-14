@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 
 import styles from "../../../assets/style";
 
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 import { useNavigation } from "@react-navigation/native";
 
 const ObjectPronouns = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   const navigation = useNavigation();
   const navegaSubjPronouns = () => {
     navigation.navigate("Subject Pronouns");
@@ -13,6 +19,12 @@ const ObjectPronouns = () => {
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           Os Pronomes Objetos são os objetos dos verbos 😁. Isso significa que
           eles <Text style={styles.txtBold}>recebem</Text> a ação do verbo, por
@@ -77,6 +89,12 @@ const ObjectPronouns = () => {
             <Text style={styles.txtCol}>os/as/lhes</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           Tens que estar afiado com os{" "}
           <TouchableOpacity style={styles.btn} onPress={navegaSubjPronouns}>
@@ -120,6 +138,12 @@ const ObjectPronouns = () => {
           <Text style={styles.txtRed}>They </Text> are ruining the country. It
           is about time to annihilate <Text style={styles.txtRed}>them </Text>.
         </Text>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );

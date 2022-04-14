@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 
 import styles from "../../../assets/style";
 
 import { useNavigation } from "@react-navigation/native";
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const Could = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   const navigation = useNavigation();
   const navegaCan = () => {
     navigation.navigate("Can");
@@ -13,6 +18,12 @@ const Could = () => {
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           <Text style={styles.txtBold}>Could</Text> é um verbo modal, é o
           passado de can. Ele é usado para expressar{" "}
@@ -76,6 +87,12 @@ const Could = () => {
             <Text style={styles.txtCol}>Eles/Elas podiam</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -116,6 +133,12 @@ const Could = () => {
             <Text style={styles.txtCol}>Eles/Elas não podiam</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtHR} />
         <View style={styles.containerTable}>
           <View
@@ -156,6 +179,12 @@ const Could = () => {
             <Text style={styles.txtCol}>Eles/Elas podiam?</Text>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );
