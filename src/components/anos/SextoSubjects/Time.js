@@ -1,11 +1,22 @@
 import { View, Text, ScrollView, Image } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const Time = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <View style={styles.container}>
         <Image
           style={styles.img}
@@ -120,6 +131,12 @@ const Time = () => {
           </Text>
         </View>
         <Text style={styles.txtHR} />
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtH2}>Dicas E Observações</Text>
         <View style={styles.txtBodyExemplos}>
           <Text style={styles.txtExemplos}>
@@ -163,6 +180,12 @@ const Time = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

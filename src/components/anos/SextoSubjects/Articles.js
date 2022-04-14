@@ -1,11 +1,22 @@
 import { View, Text, ScrollView, Image } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const Articles = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <View style={styles.container}>
         <Text style={styles.txtBody}>
           <Text style={styles.txtBold}>Artigos</Text> são palavras que definem
@@ -57,6 +68,12 @@ const Articles = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

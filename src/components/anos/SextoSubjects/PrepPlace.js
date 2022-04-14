@@ -1,11 +1,22 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const PrepPlace = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         As <Text style={styles.txtBold}>Preposições de Lugar </Text>
         são usadas para mostrar a posição ou localização de uma coisa em relação
@@ -59,6 +70,12 @@ const PrepPlace = () => {
           <Text style={styles.txtCol}>embaixo, sob</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH3}>
         Explicações Com Exemplos De Uso Das Preposições Mais Duvidosas.
       </Text>
@@ -120,6 +137,12 @@ const PrepPlace = () => {
           mora <Text style={styles.txtRed}>ao lado de</Text> Peter Parker.)
         </Text>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

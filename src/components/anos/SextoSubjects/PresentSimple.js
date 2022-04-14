@@ -1,11 +1,22 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const PresentSimple = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         O <Text style={styles.txtBold}>Presente Simples</Text> é usado quando se
         fala de: a) algo que é verdade no presente. Ex.: I live in Recife. (Eu
@@ -115,6 +126,12 @@ const PresentSimple = () => {
           <Text style={styles.txtCol}>Eles/Elas morrem</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -155,6 +172,12 @@ const PresentSimple = () => {
           <Text style={styles.txtCol}>Eles/Elas não morrem</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -195,6 +218,12 @@ const PresentSimple = () => {
           <Text style={styles.txtCol}>Eles/Elas morrem?</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
     </ScrollView>
   );

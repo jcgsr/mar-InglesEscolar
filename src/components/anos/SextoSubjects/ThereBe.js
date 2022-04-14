@@ -1,11 +1,22 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const ThereBe = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         <Text style={styles.txtBold}>There to Be</Text> é usado quando se quer
         fazer refência à existência ou presença de alguém ou algo. Ele posssui
@@ -53,6 +64,12 @@ const ThereBe = () => {
           guitarras ali?).
         </Text>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

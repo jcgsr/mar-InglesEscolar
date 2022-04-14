@@ -1,11 +1,23 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const Demonstrative = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
+
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Os <Text style={styles.txtBold}>Pronomes Demonstrativos</Text> são
         usados em vez de um sintagma nominal (nome e seus respectivos
@@ -40,12 +52,24 @@ const Demonstrative = () => {
           <Text style={styles.txtCol}>Those</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         <Text style={styles.txtBold}>This/These</Text> é usado para indicar
         proximidade com o falante. Já{" "}
         <Text style={styles.txtBold}>That/Those</Text> é usado para indicar
         distância.
       </Text>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

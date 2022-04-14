@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const SubjectPronouns = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Os <Text style={styles.txtBold}>Pronomes Pessoais</Text> são os sujeitos
         dos verbos. O pronome pessoal <Text style={styles.txtBold}>"I" </Text>
@@ -48,6 +59,12 @@ const SubjectPronouns = () => {
           <Text style={styles.txtCol}>Eles/Elas</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

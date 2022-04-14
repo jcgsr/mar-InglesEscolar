@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
 
+// adMob
+import {
+  // AdMobInterstitial,
+  AdMobBanner,
+  setTestDeviceIDAsync,
+} from "expo-ads-admob";
+
 const Modals = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
+
   return (
     <View>
       <ScrollView>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtBody}>
           Os Verbos Modais são sobre a atitude de uma pessoa em relação ao
           mundo. Ela pode expressar
@@ -184,6 +201,12 @@ const Modals = () => {
             </View>
           </View>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </ScrollView>
     </View>
   );

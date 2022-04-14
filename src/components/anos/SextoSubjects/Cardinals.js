@@ -1,11 +1,22 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const Cardinal = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Os <Text style={styles.txtBold}>Números Cardinais</Text> (um, dois,
         três, etc.) são adjetivos que se referem à quantidade. Confere a tabela
@@ -108,6 +119,12 @@ const Cardinal = () => {
           <Text style={styles.txtCol}>one hundred</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH2}>Dicas</Text>
       <View style={styles.txtBodyExemplos}>
         <Text style={styles.txtExemplos}>
@@ -136,6 +153,12 @@ const Cardinal = () => {
           exemplo: 888 = eight hundred (and) eighty-eight.
         </Text>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

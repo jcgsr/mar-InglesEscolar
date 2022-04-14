@@ -7,16 +7,27 @@ import {
   TouchableOpacity,
   Button,
 } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../assets/style";
+
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Home = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
       <View style={styles.container}>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtH1Home}>Inglês Fundamental Maior</Text>
         <Image
           style={styles.img}
@@ -79,6 +90,12 @@ const Home = () => {
           claro? Qualquer dúvida, novamente, só entrar em contato pelos meios
           acima mencionados. Bons estudos!
         </Text>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </View>
     </ScrollView>
   );

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const PossessiveAdj = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
+
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Os <Text style={styles.txtBold}>Adjetivos Possessivos</Text> são usados
         para mostrar
@@ -52,6 +64,12 @@ const PossessiveAdj = () => {
           <Text style={styles.txtCol}>Deles/Delas</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

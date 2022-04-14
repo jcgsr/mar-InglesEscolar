@@ -5,13 +5,19 @@ import {
   Linking,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+
+import React, { useEffect } from "react";
+
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 import styles from "../../../assets/style";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Plural = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
       <Text style={styles.txtBody}>
@@ -49,6 +55,12 @@ const Plural = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtBody}>
         • Casos especiais: a) e o substantivo terminar com{" "}
@@ -102,6 +114,12 @@ const Plural = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtBody}>
         b) Se o substantivo terminar com <Text style={styles.txtBold}>y</Text>,
@@ -139,6 +157,12 @@ const Plural = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtBody}>
         c) Se o substantivo terminar com{" "}
@@ -173,6 +197,12 @@ const Plural = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtBody}>d) Irregulares (mais usados)</Text>
       <View style={styles.containerTable}>
@@ -222,6 +252,12 @@ const Plural = () => {
           </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtBody}>
         e) Mais usados que nunca mudam no plural:{" "}
@@ -243,6 +279,12 @@ const Plural = () => {
         </TouchableOpacity>
         , preguiça! 😁
       </Text>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

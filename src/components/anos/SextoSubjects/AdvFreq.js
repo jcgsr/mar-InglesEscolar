@@ -5,13 +5,25 @@ import {
   Linking,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const AdvFreq = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Os
         <Text style={styles.txtBody}>Advérbios de Frequência</Text>
@@ -53,6 +65,12 @@ const AdvFreq = () => {
           <Text style={styles.txtCol}>nunca </Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH3}>
         Explicações Com Exemplos De Uso Dos Advérbios Acima.
       </Text>
@@ -98,6 +116,12 @@ const AdvFreq = () => {
           </TouchableOpacity>{" "}
           para ver mais.
         </Text>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </View>
     </ScrollView>
   );

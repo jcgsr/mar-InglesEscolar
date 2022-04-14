@@ -1,11 +1,22 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const PresentContinuous = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Usa-se o{" "}
         <Text style={styles.txtBold}>Presente Contínuo (gerúndio)</Text> quando
@@ -166,6 +177,12 @@ const PresentContinuous = () => {
         Ex.: am I watching? Are you watching? Is he watching?
       </Text>
       <Text style={styles.txtHR}></Text>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <View style={styles.containerTableCol}>
         <Text style={styles.txtH2}>Atenção</Text>
         {/*AT*/}
@@ -198,6 +215,12 @@ const PresentContinuous = () => {
           <Text style={styles.txtRed}>ping</Text>
         </Text>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

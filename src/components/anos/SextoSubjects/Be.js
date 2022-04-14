@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const Be = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Um dos verbos mais importantes em inglês, o verbo{" "}
         <Text style={styles.txtBold}>"to be" (ser/estar)</Text> é o mais usado
@@ -68,6 +79,12 @@ const Be = () => {
           <Text style={styles.txtCol}>Eles/Elas são</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -108,6 +125,12 @@ const Be = () => {
           <Text style={styles.txtCol}>Eles/Elas são</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -148,6 +171,12 @@ const Be = () => {
           <Text style={styles.txtCol}>Eles/Elas não são</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -188,6 +217,12 @@ const Be = () => {
           <Text style={styles.txtCol}>Eles/Elas não são</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -228,6 +263,12 @@ const Be = () => {
           <Text style={styles.txtCol}>Eles/Elas são?</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

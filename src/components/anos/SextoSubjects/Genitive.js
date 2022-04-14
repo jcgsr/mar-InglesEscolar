@@ -1,11 +1,19 @@
 import { View, Text, ScrollView, Image } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
+
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const Genitive = () => {
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <View style={styles.container}>
         <Image
           style={styles.img}
@@ -79,6 +87,12 @@ const Genitive = () => {
             banda diferente.)
           </Text>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </View>
     </ScrollView>
   );

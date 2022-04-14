@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEfffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
 
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const Conditionals = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
+
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Os Condicionais descrevem o resultado de uma determinada condição. A
         oração condicional iniciada com <Text style={styles.txtBold}>if</Text>{" "}
@@ -204,6 +217,12 @@ const Conditionals = () => {
           you would have lived better. - Se você tivesse alugado aquele
           apartmento, você teria morado melhor.
         </Text>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
       </View>
     </ScrollView>
   );
