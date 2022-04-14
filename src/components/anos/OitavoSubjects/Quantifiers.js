@@ -1,11 +1,21 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const Quantifiers = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Um quantificador é uma palavra que geralmente vem antes de um
         substantivo para expressar a{" "}
@@ -56,6 +66,12 @@ const Quantifiers = () => {
           <Text style={styles.txtCol}>maioria</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH2}>Usos e Exemplos</Text>
       <Text style={styles.txtBodyExemplos}>
         <Text style={styles.txtExemplos}>
@@ -130,6 +146,12 @@ const Quantifiers = () => {
           <Text style={styles.txtCol}>menos</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH2}>Usos e Exemplos</Text>
       <Text style={styles.txtBodyExemplos}>
         <Text style={styles.txtExemplos}>
@@ -169,6 +191,12 @@ const Quantifiers = () => {
           <Text style={styles.txtCol}>um pouco</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

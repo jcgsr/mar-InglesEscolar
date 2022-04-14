@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const RelativePronouns = () => {
+	useEffect(() => {
+		setTestDeviceIDAsync("EMULATOR");
+	}, []);
 	return (
 		<ScrollView>
+			<AdMobBanner
+				bannerSize="smartBanner"
+				adUnitID="ca-app-pub-2008019372085379/1007709159"
+				servePersonalizedAds // true or false
+				onDidFailToReceiveAdWithError={(e) => console.log(e)}
+			/>
 			<Text style={styles.txtBody}>
 				Os <Text style={styles.txtBold}>Pronomes Relativos</Text> são usados
 				para introduzir orações relativas. Essas orações nos dão informações
@@ -69,6 +79,12 @@ const RelativePronouns = () => {
 						whose - cujo (pessoas, animais ou coisas)
 					</Text>
 				</View>
+				<AdMobBanner
+					bannerSize="smartBanner"
+					adUnitID="ca-app-pub-2008019372085379/1007709159"
+					servePersonalizedAds // true or false
+					onDidFailToReceiveAdWithError={(e) => console.log(e)}
+				/>
 				<View style={styles.txtExemplosBody}>
 					<Text style={styles.txtH2}>Observações E Exemplos</Text>
 					<Text style={styles.txtExemplos}>
@@ -159,6 +175,12 @@ const RelativePronouns = () => {
 					</Text>
 				</View>
 			</View>
+			<AdMobBanner
+				bannerSize="smartBanner"
+				adUnitID="ca-app-pub-2008019372085379/1007709159"
+				servePersonalizedAds // true or false
+				onDidFailToReceiveAdWithError={(e) => console.log(e)}
+			/>
 		</ScrollView>
 	);
 };

@@ -1,10 +1,21 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "../../../assets/style";
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const PrefixSufix = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         Prefixos são letras que são adicionadas no início de uma palavra para
         formar uma nova palavra com um significado diferente. Os prefixos podem,
@@ -69,6 +80,12 @@ const PrefixSufix = () => {
           <Text style={styles.txtCol}>não (unhappy)</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH2}>Sufixos</Text>
       <Text style={styles.txtH3}>Substantivos</Text>
       <View style={styles.containerTable}>
@@ -118,6 +135,12 @@ const PrefixSufix = () => {
           <Text style={styles.txtCol}>estado (transition)</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtH3}>Verbos</Text>
       <View style={styles.containerTable}>
@@ -151,6 +174,12 @@ const PrefixSufix = () => {
           <Text style={styles.txtCol}>tornar-se (socialize)</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <Text style={styles.txtH3}>Adjetivos</Text>
       <View style={styles.containerTable}>
@@ -196,6 +225,12 @@ const PrefixSufix = () => {
           <Text style={styles.txtCol}>caracterizado (lazy)</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

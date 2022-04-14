@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 
 import styles from "../../../assets/style";
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 import { useNavigation } from "@react-navigation/native";
 
 const Will = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   const navigation = useNavigation();
   const navegaBeGoingTo = () => {
     navigation.navigate("Be Going To");
   };
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         O futuro com <Text style={styles.txtBold}>will</Text> expressa uma
         decisão espontânea, uma suposição em relação ao futuro ou uma ação no
@@ -126,6 +136,12 @@ const Will = () => {
           <Text style={styles.txtCol}>They will - They'll</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH2}>Conjugação</Text>
       <View style={styles.containerTable}>
         <View
@@ -166,6 +182,12 @@ const Will = () => {
           <Text style={styles.txtCol}>Eles/Elas vencerão</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -206,6 +228,12 @@ const Will = () => {
           <Text style={styles.txtCol}>Eles/Elas não vencerão</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtHR} />
       <View style={styles.containerTable}>
         <View
@@ -246,6 +274,12 @@ const Will = () => {
           <Text style={styles.txtCol}>Eles/Elas vencerão?</Text>
         </View>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtH2}>Usos</Text>
       <View style={styles.containerTableCol}>
         <View
@@ -356,6 +390,12 @@ const Will = () => {
           </TouchableOpacity>
         </Text>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

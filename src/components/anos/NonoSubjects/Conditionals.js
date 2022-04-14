@@ -1,4 +1,4 @@
-import React, { useEfffect } from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";

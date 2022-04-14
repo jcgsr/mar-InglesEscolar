@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
-
+// adMob
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 const AdjectivesSuperlative = () => {
+	useEffect(() => {
+		setTestDeviceIDAsync("EMULATOR");
+	}, []);
+
 	return (
 		<ScrollView>
+			<AdMobBanner
+				bannerSize="smartBanner"
+				adUnitID="ca-app-pub-2008019372085379/1007709159"
+				servePersonalizedAds // true or false
+				onDidFailToReceiveAdWithError={(e) => console.log(e)}
+			/>
 			<Text style={styles.txtBody}>
 				O <Text style={styles.txtBold}>Superlativo do Adjetivo</Text> é
 				usado para descrever um objeto que está no limite superior ou
@@ -101,6 +112,12 @@ const AdjectivesSuperlative = () => {
 					quiet)
 				</Text>
 			</View>
+			<AdMobBanner
+				bannerSize="smartBanner"
+				adUnitID="ca-app-pub-2008019372085379/1007709159"
+				servePersonalizedAds // true or false
+				onDidFailToReceiveAdWithError={(e) => console.log(e)}
+			/>
 		</ScrollView>
 	);
 };

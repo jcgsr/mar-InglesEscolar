@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
 
 const BeGoingTo = () => {
+  useEffect(() => {
+    setTestDeviceIDAsync("EMULATOR");
+  }, []);
   return (
     <ScrollView>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
       <Text style={styles.txtBody}>
         O tempo futuro formado com a estrutura{" "}
         <Text style={styles.txtBold}>be + going to + verbo</Text> é comumente
@@ -135,6 +145,12 @@ const BeGoingTo = () => {
             ficar tudo bem.) - The Ramones
           </Text>
         </View>
+        <AdMobBanner
+          bannerSize="smartBanner"
+          adUnitID="ca-app-pub-2008019372085379/1007709159"
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={(e) => console.log(e)}
+        />
         <Text style={styles.txtH2}>Diferenças Entre Be Going To/Will</Text>
 
         <Text style={styles.txtExemplos}>
@@ -221,6 +237,12 @@ const BeGoingTo = () => {
           subir.)
         </Text>
       </View>
+      <AdMobBanner
+        bannerSize="smartBanner"
+        adUnitID="ca-app-pub-2008019372085379/1007709159"
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => console.log(e)}
+      />
     </ScrollView>
   );
 };

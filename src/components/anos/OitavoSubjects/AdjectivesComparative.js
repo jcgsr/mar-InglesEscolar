@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, ScrollView } from "react-native";
 
 import styles from "../../../assets/style";
 
+import { AdMobBanner, setTestDeviceIDAsync } from "expo-ads-admob";
+
 const AdjectivesComparative = () => {
+	useEffect(() => {
+		setTestDeviceIDAsync("EMULATOR");
+	}, []);
 	return (
 		<ScrollView>
+			<AdMobBanner
+				bannerSize="smartBanner"
+				adUnitID="ca-app-pub-2008019372085379/1007709159"
+				servePersonalizedAds // true or false
+				onDidFailToReceiveAdWithError={(e) => console.log(e)}
+			/>
 			<Text style={styles.txtBody}>
 				O <Text style={styles.txtBold}>Comparativo do Adjetivo</Text> é
 				usado para comparar uma pessoa ou coisa com outra e permitindo dizer
@@ -139,6 +150,12 @@ const AdjectivesComparative = () => {
 					<Text style={styles.txtBold}>mais</Text> preguiçoso eu fico.)
 				</Text>
 			</View>
+			<AdMobBanner
+				bannerSize="smartBanner"
+				adUnitID="ca-app-pub-2008019372085379/1007709159"
+				servePersonalizedAds // true or false
+				onDidFailToReceiveAdWithError={(e) => console.log(e)}
+			/>
 		</ScrollView>
 	);
 };
