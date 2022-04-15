@@ -51,7 +51,7 @@ const Could = () => {
         <View style={styles.containerTable}>
           <View
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#B60D22",
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -70,7 +70,7 @@ const Could = () => {
           </View>
           <View
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "#040644",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -97,7 +97,7 @@ const Could = () => {
         <View style={styles.containerTable}>
           <View
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#B60D22",
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -116,7 +116,7 @@ const Could = () => {
           </View>
           <View
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "#040644",
               flex: 1,
               alignItems: "center",
               padding: 5,
@@ -143,7 +143,7 @@ const Could = () => {
         <View style={styles.containerTable}>
           <View
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#B60D22",
               flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -162,7 +162,7 @@ const Could = () => {
           </View>
           <View
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "#040644",
               flex: 1,
               alignItems: "center",
               padding: 5,

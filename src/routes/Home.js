@@ -58,7 +58,17 @@ const Home = () => {
             size={32}
             color="grey"
           />
-          . <Text style={styles.txtBold}>Disclaimer</Text>: eu utilizei,
+          . Há ainda o site{" "}
+          <Text
+            style={styles.txtH2}
+            onPress={() => {
+              Linking.openURL("https://www.englisheasyfm.com.br/");
+            }}
+          >
+            English?! Easy...
+          </Text>
+          , se preferires.
+          <Text style={styles.txtBold}>Disclaimer</Text>Eu utilizei,
           primordialmente, dois livros para consulta ao construir esse app. São
           eles:{" "}
           <Text
