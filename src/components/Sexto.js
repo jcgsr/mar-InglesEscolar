@@ -63,7 +63,7 @@ const Sexto = () => {
   return (
     <View style={styles.containerSexto}>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaSubjPronouns}>
-        <Text style={styles.txt}>Subject Pronouns</Text>
+        <Text style={styles.txt}>Subj. Pronouns</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaBe}>
         <Text style={styles.txt}>To Be</Text>
@@ -75,7 +75,7 @@ const Sexto = () => {
         <Text style={styles.txt}>Possessive Adj.</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaCardinals}>
-        <Text style={styles.txt}>Cardinal Numbers</Text>
+        <Text style={styles.txt}>Card. Numbers</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaGenitive}>
         <Text style={styles.txt}>Genitive</Text>
@@ -108,7 +108,7 @@ const Sexto = () => {
         <Text style={styles.txt}>Telling Time</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaOrdinals}>
-        <Text style={styles.txt}>Ordinal Numbers</Text>
+        <Text style={styles.txt}>Ord. Numbers</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btnSexto} onPress={navegaDates}>
         <Text style={styles.txt}>Dates</Text>

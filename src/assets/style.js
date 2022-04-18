@@ -139,7 +139,7 @@ export default StyleSheet.create({
     backgroundColor: "#B60D22",
     width: "50%",
     borderRadius: 10,
-    padding: 8,
+    padding: 5,
     alignItems: "center",
     margin: 2,
   },
