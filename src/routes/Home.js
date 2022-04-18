@@ -68,7 +68,7 @@ const Home = () => {
             English?! Easy...
           </Text>
           , se preferires.
-          <Text style={styles.txtBold}>Disclaimer</Text>Eu utilizei,
+          <Text style={styles.txtBold}> Disclaimer: </Text>Eu utilizei,
           primordialmente, dois livros para consulta ao construir esse app. São
           eles:{" "}
           <Text
